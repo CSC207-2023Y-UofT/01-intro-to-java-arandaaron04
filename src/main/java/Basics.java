@@ -44,7 +44,7 @@ public class Basics {
          *                Hello World!
          */
 
-        System.out.println("HelloWorld");
+        System.out.println("Hello World!");
 
         /* 4. In Python, we could declare variables using a simple assignment
          *    statement. For example:
