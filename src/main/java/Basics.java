@@ -46,6 +46,7 @@ public class Basics {
 
         System.out.println("Hello World!");
 
+
         /* 4. In Python, we could declare variables using a simple assignment
          *    statement. For example:
          *        x = 10
@@ -64,6 +65,7 @@ public class Basics {
          */
 
         int my_variable = 100;
+
 
         /* Do not remove the line below: if you did task 2 correctly, then
          * you should see the message "my_variable's value is 100" if you run
@@ -100,9 +102,8 @@ public class Basics {
          * Current count: 0
          */
 
-        for (int i = 10; i >= 0; i--){
+        for (int i = 10; i >= 0; i--)
             System.out.println("Current count: " + i);
-        }
 
     }
 
@@ -145,12 +146,11 @@ public class Basics {
          */
         StringBuilder ret = new StringBuilder();
 
-        String[] split_string = to_split.split(" ");
+        // Fill in the rest of the body here
 
-        for (String str : split_string) {
-            ret.append(str.charAt(0));
-        }
-
+        String[] s = to_split.split(" ");
+        for (int i = 0; i < s.length; ++i)
+            ret.append(s[i].charAt(0));
         return ret.toString();
     }
 
@@ -177,14 +177,8 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-
-        int len = arr.length;
-
-        for (int i = 0; i <= len; i++){
-            if (arr[i] % 2 != 0){
-                current_sum += arr[i];
-            }
-        }
+        for (int i = 1; i < arr.length; i += 2)
+            current_sum += arr[i];
 
         return current_sum;
     }
